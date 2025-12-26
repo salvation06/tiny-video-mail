@@ -50,7 +50,7 @@ const Auth = () => {
         }
       } else {
         toast.success("Welcome back!");
-        navigate("/");
+        navigate("/inbox");
       }
     } else {
       const { error } = await supabase.auth.signUp({
@@ -73,7 +73,7 @@ const Auth = () => {
         }
       } else {
         toast.success("Account created successfully!");
-        navigate("/");
+        navigate("/inbox");
       }
     }
 

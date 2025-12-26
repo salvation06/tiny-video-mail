@@ -21,8 +21,8 @@ const LandingPage = () => {
             <a href="#pricing" className="hover:text-white transition">Pricing</a>
           </div>
           <div className="flex items-center gap-4">
-            <a href="/login" className="text-sm text-gray-400 hover:text-white transition">Log in</a>
-            <a href="/signup" className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full text-sm font-medium transition">
+            <a href="/auth" className="text-sm text-gray-400 hover:text-white transition">Log in</a>
+            <a href="/auth" className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full text-sm font-medium transition">
               Get Started
             </a>
           </div>
@@ -336,7 +336,7 @@ const LandingPage = () => {
               Free for videos under 5 minutes. No credit card required.
             </p>
             <a 
-              href="/signup" 
+              href="/auth" 
               className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-200 transition"
             >
               Create Free Account <ChevronRight size={18} />
