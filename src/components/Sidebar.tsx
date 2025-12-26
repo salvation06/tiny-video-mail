@@ -24,14 +24,14 @@ const Sidebar = ({ username }: SidebarProps) => {
   };
 
   const navItems = [
-    { path: "/", icon: Inbox, label: "Inbox" },
+    { path: "/inbox", icon: Inbox, label: "Inbox" },
     { path: "/compose", icon: Send, label: "Compose" },
     { path: "/upload", icon: Upload, label: "Upload" },
   ];
 
   return (
     <aside className="fixed left-0 top-0 h-full w-64 bg-card border-r-2 border-border p-4 flex flex-col">
-      <Link to="/" className="flex items-center gap-2 mb-8 px-2">
+      <Link to="/inbox" className="flex items-center gap-2 mb-8 px-2">
         <Video className="h-8 w-8 text-primary" />
         <span className="text-xl font-bold text-foreground">TinyBot</span>
       </Link>
