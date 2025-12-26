@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Compose from "./pages/Compose";
 import FileUpload from "./pages/FileUpload";
+import Contacts from "./pages/Contacts";
+import EmailCompose from "./pages/EmailCompose";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/auth" element={<Auth />} />
           <Route path="/compose" element={<Compose />} />
           <Route path="/upload" element={<FileUpload />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/email" element={<EmailCompose />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
