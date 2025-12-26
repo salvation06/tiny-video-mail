@@ -14,7 +14,93 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          display_name: string | null
+          id: string
+          updated_at: string
+          user_id: string
+          username: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id: string
+          username: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id?: string
+          username?: string
+        }
+        Relationships: []
+      }
+      video_messages: {
+        Row: {
+          downloaded_at: string | null
+          file_path: string
+          file_size_mb: number | null
+          filename: string
+          id: string
+          is_deleted: boolean
+          message_text: string | null
+          recipient_id: string
+          sender_id: string
+          sent_at: string
+          viewed_at: string | null
+        }
+        Insert: {
+          downloaded_at?: string | null
+          file_path: string
+          file_size_mb?: number | null
+          filename: string
+          id?: string
+          is_deleted?: boolean
+          message_text?: string | null
+          recipient_id: string
+          sender_id: string
+          sent_at?: string
+          viewed_at?: string | null
+        }
+        Update: {
+          downloaded_at?: string | null
+          file_path?: string
+          file_size_mb?: number | null
+          filename?: string
+          id?: string
+          is_deleted?: boolean
+          message_text?: string | null
+          recipient_id?: string
+          sender_id?: string
+          sent_at?: string
+          viewed_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "video_messages_recipient_id_fkey"
+            columns: ["recipient_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "video_messages_sender_id_fkey"
+            columns: ["sender_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
